@@ -2,8 +2,8 @@ import type { Response } from "express";
 import type { ResultHandler, ErrorResponse } from "@/interface/handler";
 
 export const genericError = async (
-	message: string = "",
-	status: number = 404
+	message = "",
+	status = 404
 ): ResultHandler => {
 	return [
 		null,
@@ -17,8 +17,8 @@ export const genericError = async (
 
 export const infoResponse = async (
 	data: any,
-	message: string = "Success!",
-	status: number = 200
+	message = "Success!",
+	status = 200
 ): ResultHandler => {
 	return [
 		{
